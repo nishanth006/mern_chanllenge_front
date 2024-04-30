@@ -44,7 +44,7 @@ const MyCounter = () => {
 
   const incrementMyCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/MyIncrement');
+      await axios.post('https://mern-challenge-back.onrender.com/api/counter/MyIncrement');
       dispatch({ type: 'INCREMENT-MYCOUNT' });
     } catch (err) {
       console.error(err);
@@ -53,7 +53,7 @@ const MyCounter = () => {
 
   const decrementMyCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/MyDecrement');
+      await axios.post('https://mern-challenge-back.onrender.com/api/counter/MyDecrement');
       dispatch({ type: 'DECREMENT-MYCOUNT' });
     } catch (err) {
       console.error(err);
@@ -79,7 +79,7 @@ const Counter = () => {
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/increment');
+      await axios.post('https://mern-challenge-back.onrender.com/api/counter/increment');
       dispatch({ type: 'INCREMENT' });
     } catch (err) {
       console.error(err);
@@ -88,7 +88,7 @@ const Counter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/decrement');
+      await axios.post('https://mern-challenge-back.onrender.com/api/counter/decrement');
       dispatch({ type: 'DECREMENT' });
     } catch (err) {
       console.error(err);
@@ -113,7 +113,7 @@ const App = () => {
   console.log(state);
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/counter');
+      const response = await axios.get('https://mern-challenge-back.onrender.com/api/counter');
       dispatch({ type: 'SET', count: response.data.count, myCount: response.data.myCount});
     } catch (err) {
       console.error(err);
